@@ -1,0 +1,365 @@
+*{
+    margin:15px;
+    padding: 0;
+    font-family:poppins,sans-serif;
+    box-sizing:border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color:#0B1120;
+    color:#E6EDF7;
+
+}
+#header{
+    width:auto;
+    height:100vh;
+    margin: -25px;
+    background-image: URL(imgs/sample.png);   
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding:10px 10px;
+}
+nav{
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+nav ul li a{
+    color:#38BDF8;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+}
+nav ul li a:after{
+    content:"";
+    height:3px;
+    width:0px;
+    bottom:-6px;
+    left: 0;
+    position:absolute;
+    background:#818CF8;
+    transition: 0.25s;
+
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top:10%;
+    font-size:30px;
+    margin-left:3px;
+}
+.header-text h1{
+    font-size:60px;
+    margin-top:10px;
+    
+}
+.header-text h1 span{
+    color:#38BDF8;
+}
+.header-text p span{
+    margin-left: 0;
+    color:#38BDF8;
+}
+.tagline {
+    margin-top:12px;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.12);
+    opacity: 0;
+    animation: fadeup 1.2s ease forwards;
+    color:#A7B8CE;
+    font-size:25px;
+    animation-delay: 0.5s;
+}
+@keyframes fadeup {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*---------------------------about--------------------------------*/
+#about{
+    padding:50px 0;
+    color:#94A3B8;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.abt-col-1{
+    flex-basis:35%;
+}
+.abt-col-1 img{
+    width:100%;
+    border-radius: 10px;
+}
+.abt-col-2{
+    flex-basis:60%;
+    
+}
+.sub-title{
+    font-size:60px;
+    font-weight:600;
+    color:#E6EDF7;
+}
+.title-sub{
+    font-size:50px;
+    margin-top: 45px;
+    font-weight:600;
+    color:#38BDF8;
+
+}
+.qwe{
+    margin:10px;
+    font-size:25px;
+}
+.tab-titles{
+    display:flex;
+    margin:20px 10px 40px;
+}
+.tab-links{
+    color: #38BDF8;
+    margin-right:50px;
+    cursor:pointer;
+    font-size:25px;
+    font-weight:500;
+    position:relative;
+}
+.tab-links::after{
+    content:"";
+    height:3px;
+    width:0px;
+    bottom:-6px;
+    left: 0;
+    position:absolute;
+    background:#818CF8;
+    transition: 0.125s;
+}
+
+.tab-links.active-link::after{
+    width: 75%;
+}
+.github-icon {
+    filter: invert(1);
+}
+.github-icon {
+    background:white;
+    border-radius:50%;
+    padding: 5px;
+}
+.tab-contents ul li img{
+    height:75px;
+    width: 75px;
+}
+.tab-contents ul li{
+    margin-left: 1px;
+    margin-bottom: 10px;
+    list-style: none;
+    font-size:20px;
+}
+.tab-contents ul li span{
+    color:#94A3B8;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display:block;
+}
+/*---------------------------Projects--------------------------*/
+#project{
+    padding: 50px 0px;
+}
+.project-list{
+    display: grid;
+    grid-template-columns:repeat(3,minmax(250px,1fr));
+    grid-gap:40px;
+    border-radius: 10px;
+    margin-top:50px;
+}
+.extra-list {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    margin-top: 40px;
+}
+.extra-list .p {
+    width: 100%;
+    border-radius:10px;
+    overflow: hidden;
+}
+
+.extra-list[hidden] {
+    display: none !important;
+}
+.p{
+    border-radius:10px 0  10px 0;
+    position:relative;
+    overflow: hidden;
+}
+.p img{
+    margin:0;
+    border-radius:inherit;
+    display:block;
+    object-fit: cover;
+    height:100%;
+    width:100%;
+    transition: transform 0.4s ease;
+}
+.layer {
+    position: absolute;
+    inset: 0;
+    margin:0;
+    z-index: 2;
+    background: linear-gradient(rgba(0,0,0,0.6), #818CF8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    left:0;
+    right:0;
+    bottom:0;
+    height:100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+ 
+}
+.layer h3{
+    font-size:27px;
+    font-weight: 500;
+    margin-bottom:20px;
+}
+.layer a{
+    display: flex;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size:18px;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color:#818CF8;
+    background-color:#E6EDF7;
+}
+#ic{
+    font-size:35px;
+}
+.p:hover img{
+    transform: scale(1.1);
+}
+.p:hover .layer{
+    opacity:1;
+}
+.btn{
+    display:block;
+    margin:50px auto;
+    width:fit-content;
+    padding:15px 50px;
+    border-radius:5px;
+    font-size: 25px;
+    background-color: #0B1120;
+    border:1px solid #818CF8;
+    color:#818CF8;
+    transition: background 0.5s;
+    
+}
+.btn:hover{
+    background-color:#818CF8;
+    color:#E6EDF7
+}
+/*-------------------------contact-------------------------*/
+.col-left{
+    flex-basis:35%;
+}
+.col-right{
+    flex-basis:60%;
+}
+.col-left p{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    gap: 30px;
+    margin: 5px 0;
+}
+#iv{
+    font-size: 45px;
+    color:#38BDF8;
+}
+.s-icons{
+    margin-top: 25px;
+}
+#ib{
+    text-decoration: none;
+    font-size:45px;
+    color: #38BDF8;
+    margin-left: -15px;
+    display:inline-block;
+    transition: transform 0.25s;
+
+}
+#ib:hover{
+    color:#818CF8;
+    transform:translateY(-5px);
+}
+.btn1{
+    display:inline-block;
+    margin:50px auto;
+    width:fit-content;
+    padding:15px 50px;
+    border-radius:5px;
+    font-size: 25px;
+    border-color:#38BDF8;
+    color:#0B1120;
+    background-color: #38BDF8;
+    transition: transform 0.25s;
+    
+}
+.btn1:hover{
+    background-color:#0EA5E9;
+}
+.col-left form{
+    width:100%;
+}
+form input,form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    padding:15px;margin:15px 0;
+    font-size:20px;
+    border-radius: 8px;
+    color: #0EA5E9;
+    background-color:#161F33;
+}
+form .btn2{
+    padding:14px 60px;
+    font-size:20px;
+    margin-top: 20px;
+    cursor:pointer;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #0B1120;
+    color: #94A3B8;
+    font-size: 14px;
+}

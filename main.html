@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>portfolio</title>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <script src="https://kit.fontawesome.com/888fe3bd41.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id = "header">
+            <div class="container">
+                <nav>
+                    
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#title-sub">Skills</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+            <div class="header-text">
+                
+                <h1>Hi,I'M <span>Harish Kumar</span></h1>
+                <p><span>CSE</span> Student</p>
+                <p class="tagline">Exploring. Building. Evolving.</p>
+            </div>
+            </div>
+        </div>
+        <!------------------------abt----------------->
+        <div id="about">
+            <div class="row">
+                <div class="abt-col-1">
+                     <img src="imgs/logo.png">
+                </div>
+                <div class="abt-col-2">
+                    <h1 class="sub-title">about me</h1>
+                    <p class="qwe"> I'm a Computer Science student interested in web development and<br>
+                                    software development. I enjoy exploring new technologies, building<br>
+                                    projects, and turning ideas into something useful.<br><br>
+                                    I believe in learning by doing — experimenting with code, solving<br>
+                                    problems, and understanding how things work behind the scenes.<br>
+                                    I'm always exploring different areas of computer science, improving <br>
+                                    my skills, and challenging myself to build better things.
+                    </p>
+                    <h1 class="title-sub" id="title-sub">Skills</h1>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Programming')">Programming languages</p>
+                        <p class="tab-links" onclick="opentab('Web')">Web Development</p>
+                        <p class="tab-links" onclick="opentab('Tools')">Tools</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="Programming">
+                        <ul><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" /></li>
+                            <li><img src="https://cdn.simpleicons.org/c/00599C" width="50"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Web">
+                        <ul>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /></li>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Tools">
+                        <ul>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class="github-icon"></li>
+                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--------------------------Projects----------------------------->
+        <div id="project">
+            <div class="container">
+                <h1 class="sub-title">Projects</h1>
+                <div class="project-list">
+                    <div class="p">
+                        <img src="imgs/w1.png">
+                        <div class="layer">
+                            <i class="fa-solid fa-location-crosshairs" id="ic"></i>
+                            <h3>Emergency Service Locator</h3>
+                            <p>Python-Based application designed to help users locate the nearest
+                               essential services such as hospitals,petrol stations,ATMs based 
+                               on their current coordinates.</p>
+                               <a href="https://github.com/HARISHKUMAR1703/EmergencyServiceLocator"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p">
+                        <img src="imgs/w2.png">
+                        <div class="layer">
+                            <i class="fa-regular fa-truck" id="ic"></i>
+                            <h3>TransitOPS</h3>
+                            <p>TransitOPS is a centralized fleet management platform designed to 
+                               help logistics companies efficiently manage vehicles,drivers,trips,
+                               maintenance,fuel expenses and operartional analytics.</p>
+                               <a href="https://github.com/HARISHKUMAR1703/odoo-hackathon-2026"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p">
+                        <img src="imgs/w3.jpg">
+                        <div class="layer">
+                            <i class="fa-solid fa-circle-user" id="ic"></i>
+                            <h3>Portfolio Website</h3>
+                            <p>A personal portfolio website showcasing my skills,
+                               projects, and journey as a Computer Science 
+                               student. Built using HTML, CSS, and JavaScript 
+                               with a modern, responsive design.</p>
+                               <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="project-list extra-list" id="extra-projects" hidden>
+                    <div class="p">
+                        <div class="p">
+                        <img src="imgs/w4.png">
+                        <div class="layer">
+                            <i class="fa-solid fa-dice" id="ic"></i>
+                            <h3>Dice Roller</h3>
+                            <p> A Simple and interactive Dice Roller Web application wher users can 
+                                roll one or multiple dice and instantly get random results.</p>
+                               <a href="https://github.com/HARISHKUMAR1703/html-and-web-development/tree/main/dice%20ui"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="btn" id="see-more">See More</button>
+            </div>
+        </div>
+        <!-----------------------------contact------------------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-square-envelope" id="iv"></i>harishnagulai17@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone" id="iv"></i> 81XXXXXXXX</p>
+                        <div class="s-icons">
+                            <a href="https://www.linkedin.com/in/harish-kumar-54938a388/"><i class="fa-brands fa-linkedin" id="ib"></i></a>
+                            <a href="https://www.instagram.com/harishhh17_?gwpx=MmM4bDB5OGo4YTNu"><i class="fa-brands fa-instagram" id="ib"></i></a>
+                            <a href="https://github.com/HARISHKUMAR1703"><i class="fa-brands fa-github" id="ib"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <form>
+                            <input type="text" name="name" placeholder="Enter your Name" required>
+                            <input type="email" name="email" placeholder="Enter your Email" required>
+                            <textarea name="msg" rows="8" placeholder="Enter your message..."></textarea>
+                            <button type="submit" class="btn1 btn2">submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 Harish Kumar. All rights reserved.</p>
+            </div>
+        </div>
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+            
+        </script>
+    </body>
+</html>
