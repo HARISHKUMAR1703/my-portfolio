@@ -369,7 +369,7 @@ form .btn2{
     font-size: 14px;
 }
 /*----------------------------media------------------------*/
-@media only screen and (max-width:1080px){
+@media only screen and (max-width:768px){
     #header{
         background-image: url(imgs/sample_1.png);
     }
