@@ -1,5 +1,4 @@
 *{
-    margin:15px;
     padding: 0;
     font-family:poppins,sans-serif;
     box-sizing:border-box;
@@ -15,7 +14,6 @@ body{
 #header{
     width:auto;
     height:100vh;
-    margin: -25px;
     background-image: URL(imgs/sample.png);   
     background-size: cover;
     background-position: center;
@@ -59,7 +57,7 @@ nav ul li a:hover::after{
 .header-text{
     margin-top:10%;
     font-size:30px;
-    margin-left:3px;
+    margin-left: 15px;
 }
 .header-text h1{
     font-size:60px;
@@ -171,10 +169,11 @@ nav ul li a:hover::after{
 .tab-contents ul li img{
     height:75px;
     width: 75px;
+    margin-right: 15px;
 }
 .tab-contents ul li{
-    margin-left: 1px;
-    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-bottom: 20px;
     list-style: none;
     font-size:20px;
 }
@@ -316,7 +315,6 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size:45px;
     color: #38BDF8;
-    margin-left: -15px;
     display:inline-block;
     transition: transform 0.25s;
 
@@ -369,24 +367,227 @@ form .btn2{
     font-size: 14px;
 }
 /*----------------------------media------------------------*/
-#mn{
-    display:none;
-}
-@media only screen and (max-width:900px){
-    #header{
-        background-image: url(imgs/sample_1.png);
-    }
-    .header-text{
-        font-size:15px;
-        margin-top:30%;
-    }
-    .header-text h1{
-        font-size:30px;
-        margin-top:10px;
-    
-    }
-    
     #mn{
-        display:block;
+        display:none;
     }
-}
+    #cl{
+        display:none;
+    }
+    html, body{
+        overflow-x:hidden;
+    }
+    img{
+        max-width:100%;
+    }
+    @media only screen and (max-width:900px){
+
+        .container{
+            padding:10px 20px;
+        }
+        #header{
+            background-image:url(imgs/sample_1.png);
+        }
+        .header-text{
+            font-size:16px;
+            margin-top:30%;
+            margin-left:0;
+        }
+        .header-text h1{
+            font-size:34px;
+            margin-top:10px;
+        }
+        .tagline{
+            font-size:18px;
+        }
+        #mn{
+            display:block;
+            font-size:25px;
+            color:#38BDF8;
+            cursor:pointer;
+        }
+        #cl{
+            display:block;
+            font-size:25px;
+            color:#38BDF8;
+            cursor:pointer;
+        }
+        nav{
+            justify-content:flex-end;
+        }
+        nav ul{
+            position:fixed;
+            top:0;
+            right:-250px;               
+            background:#161F33;
+            padding-top:60px;
+            width:250px;
+            height:100vh;
+            z-index:10;
+            transition:right 0.5s;
+        }
+        nav ul li{
+            display:block;
+            margin:25px;
+        }
+        nav ul li a{
+            font-size:20px;
+        }
+        nav ul #cl,
+        nav ul .fa-xmark{               
+            position:absolute;
+            top:25px;
+            left:25px;
+            cursor:pointer;
+            color:#38BDF8;
+        }
+        #about{
+            padding:30px 0;
+        }
+        .abt-col-1,
+        .abt-col-2{
+            flex-basis:100%;
+        }
+        .abt-col-1{
+            margin-bottom:30px;
+        }
+        .abt-col-1 img{
+            max-width:350px;
+            display:block;
+            margin:0 auto;
+        }
+        .sub-title{
+            font-size:42px;
+        }
+        .title-sub{
+            font-size:32px;
+            margin-top:30px;
+        }
+        .qwe{
+            font-size:17px;
+            margin:10px 0;
+        }
+        .tab-titles{
+            flex-wrap:wrap;
+            gap:10px 0;
+            margin:20px 0 30px;
+        }
+        .tab-links{
+            font-size:18px;
+            margin-right:25px;
+        }
+        .tab-contents ul li{
+            font-size:16px;
+        }
+        .tab-contents ul li img{
+            height:55px;
+            width:55px;
+        }
+        #project{
+            padding:30px 0;
+        }
+        .project-list{
+            grid-template-columns:repeat(2,1fr);   
+            grid-gap:25px;
+            margin-top:30px;
+        }
+        .btn{
+            font-size:18px;
+            padding:12px 35px;
+            margin:30px auto;
+        }
+        .col-left,.col-right{
+            flex-basis:100%;
+        }
+        .col-left{
+            margin-bottom:40px;
+        }
+        .col-left p{
+            font-size:18px;
+            gap:15px;
+            word-break:break-word;
+        }
+        #iv{
+            font-size:32px;
+        }
+        #ib{
+            font-size:35px;
+        }
+        .btn1{
+            font-size:18px;
+            padding:12px 35px;
+            margin:30px 0;
+        }
+        form input,
+        form textarea{
+            font-size:16px;
+            padding:12px;
+        }
+        form .btn2{
+            padding:12px 40px;
+            font-size:18px;
+        }
+        .copyright{
+            font-size:12px;
+            padding:15px 10px;
+        }
+    }
+    @media (hover:none){
+        .layer{
+            opacity:1;
+            background:linear-gradient(rgba(0,0,0,0.3), rgba(129,140,248,0.85));
+        }
+        .layer h3{
+            font-size:20px;
+            margin-bottom:10px;
+        }
+        .layer a{
+            width:45px;
+            height:45px;
+        }
+        #ic{
+            font-size:25px;
+        }
+    }
+    @media only screen and (max-width:600px){
+        .header-text{
+            margin-top:40%;
+        }
+        .header-text h1{
+            font-size:28px;
+        }
+        .tagline{
+            font-size:16px;
+        }
+
+        .sub-title{
+            font-size:32px;
+        }
+        .title-sub{
+            font-size:26px;
+        }
+        .qwe{
+            font-size:15px;
+        }
+        .tab-links{
+            font-size:16px;
+            margin-right:18px;
+        }
+        .tab-contents ul li{
+            font-size:14px;
+        }
+        .project-list{
+            grid-template-columns:1fr;            
+            grid-gap:20px;
+        }
+        .col-left p{
+            font-size:15px;
+        }
+        #iv{
+            font-size:26px;
+        }
+        .btn,
+        .btn1{
+            font-size:16px;
+            padding:10px 28px;
+        }
+    }

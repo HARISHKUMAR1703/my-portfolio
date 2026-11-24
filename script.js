@@ -1,3 +1,4 @@
+
 function opentab(tabname){
     for(tablink of tablinks){
         tablink.classList.remove("active-link");
@@ -12,3 +13,13 @@ document.getElementById("see-more").addEventListener("click", function() {
     document.getElementById("extra-projects").hidden = false;
     this.style.display = "none";
 }); 
+function openmenu(){
+    document.querySelector("nav ul").style.right = "0";
+}
+function closemenu(){
+    document.querySelector("nav ul").style.right = "-250px";
+}
+
+document.querySelectorAll("nav ul li a").forEach(function(link){
+    link.addEventListener("click", closemenu);
+});
