@@ -373,4 +373,21 @@ form .btn2{
     #header{
         background-image: url(imgs/sample_1.png);
     }
+    .header-text{
+        font-size:15px;
+        margin-top:30%;
+    }
+    .header-text h1{
+        font-size:30px;
+        margin-top:10px;
+    
+    }
+    .header-text h1 span{
+        color:#38BDF8;
+    }
+    .header-text p span{
+        margin-left: 0;
+        color:#38BDF8;
+
+    }
 }
