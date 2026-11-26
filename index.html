@@ -149,13 +149,13 @@
                         </div>
                     </div>
                     <div class="col-right">
-                        <form>
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="name" placeholder="Enter your Name" required>
                             <input type="email" name="email" placeholder="Enter your Email" required>
                             <textarea name="msg" rows="8" placeholder="Enter your message..."></textarea>
                             <button type="submit" class="btn1 btn2">submit</button>
                         </form>
-
+                            <span id="mesag"></span>
                     </div>
                 </div>
             </div>
@@ -168,5 +168,28 @@
             var tabcontents=document.getElementsByClassName("tab-contents");
             
         </script>
+
+        <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyxDtTcOjjWxWiWWstFNNDOWEtcxwdGC6bRvTtWT1XMtzydpsXMfJrcEqAOPcxySXbEOQ/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const mesag=document.getElementById("mesag");
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            fetch(scriptURL, {
+            method: 'POST',
+            body: new FormData(form)
+            })
+            .then(response =>{
+                mesag.innerHTML="message sent succesfully"
+                setTimeout(function(){
+                    mesag.innerHTML=""
+                },3000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+        </script>
+
     </body>
 </html>

@@ -366,6 +366,11 @@ form .btn2{
     color: #94A3B8;
     font-size: 14px;
 }
+#mesag{
+    color: #A7B8CE;
+    display: block;
+    margin-top:-40px
+}
 /*----------------------------media------------------------*/
     #mn{
         display:none;

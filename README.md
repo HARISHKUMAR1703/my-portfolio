@@ -1,53 +1,68 @@
-# 🌐 My Personal Portfolio
+# My Personal Portfolio
 
-🌐 **Live Website:** https://harishkumar1703.github.io/my-portfolio/
+🌐 **Live Website:** [Visit My Portfolio](https://harishkumar1703.github.io/my-portfolio/)
 
 Welcome to my personal portfolio website! This website showcases my skills, projects, and journey as a Computer Science student.
 
 ## 🛠️ Built With
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
-
-## 📌 Website Sections
-
-- **Home** – Introduction and overview.
-- **About Me** – A little about myself and my journey.
-- **Skills** – Technical skills and areas of expertise.
-- **Tools** – Technologies and tools I work with.
-- **Projects** – A collection of my projects.
-- **Contact** – Ways to get in touch with me.
-
-## 💻 Featured Projects
-
-- Emergency Service Locator
-- TransitOPS
-- Dice Roller
-- Personal Portfolio Website
+- Google Apps Script
+- Google Sheets
 
 ## ✨ Features
 
-- Fully responsive design for mobile, tablet, and desktop.
-- Modern dark-themed user interface.
-- Smooth scrolling and interactive hover effects.
-- Interactive skills section.
-- Expandable projects section.
-- Mobile-friendly navigation.
+- 🏠 **Home Section** – Introduction and personal profile.
+- 👨‍💻 **About Section** – Brief introduction about me.
+- 💻 **Skills Section** – Displays programming languages, web development skills, and tools.
+- 🚀 **Projects Section** – Showcases my projects with descriptions and GitHub links.
+- 📱 **Responsive Design** – Optimized for different screen sizes and devices.
+- 📩 **Contact Form** – Allows visitors to submit their name, email, and message.
+- 📊 **Google Sheets Integration** – Contact form submissions are stored in Google Sheets using Google Apps Script.
+- 🔄 **Form Reset** – Automatically clears input fields after submission.
 
-## 🚀 Future Improvements
+## 📩 Contact Form Workflow
 
-- 📝 Add more information and details to the Hero section.
-- 🌌 Add a parallax scrolling effect to the Home section.
-- 📩 Complete the feedback functionality in the Contact section.
-- 🎨 Fix and optimize background across different screen sizes and devices.
-- 💡 Add more features and projects.
-- 🧹 Improve code structure and maintainability.
+1. User enters their details in the contact form.
+2. JavaScript captures the form data using `FormData()`.
+3. `fetch()` sends the data to a Google Apps Script Web App using POST.
+4. Google Apps Script processes the request.
+5. Submitted information is stored in Google Sheets.
+
+## 📂 Project Structure
+
+```text
+my-portfolio/
+│
+├── index.html
+├── style.css
+├── script.js
+├── imgs/
+│   ├── logo.png
+│   ├── w1.png
+│   ├── w2.png
+│   ├── w3.jpg
+│   └── w4.png
+│
+└── README.md
+```
+
+## 🔮 Future Improvements
+
+- ✨ Add more information to the Hero section.
+- 🌌 Implement a parallax effect on the Home section.
+- 📩 Further improve the Contact section.
+- 🗄️ Integrate a proper database to replace Google Sheets for storing contact form submissions.
+- 🚀 Add more projects and continuously improve the website structure and design.
 
 ## 👨‍💻 Author
 
-**Harish Kumar**  
-Computer Science Student | Aspiring Developer
+**Harish Kumar**
+
+- GitHub: [HARISHKUMAR1703](https://github.com/HARISHKUMAR1703)
+- LinkedIn: [Harish Kumar](https://www.linkedin.com/in/harish-kumar-54938a388/)
 
 ---
 
