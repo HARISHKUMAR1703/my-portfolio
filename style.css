@@ -5,8 +5,15 @@
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+}
+.intro-wrapper {
+    position: relative;
+    background-color: #0B1120;
+
 }
 body{
+    overflow-x: clip;
     background-color:#0B1120;
     color:#E6EDF7;
 
@@ -14,9 +21,17 @@ body{
 #header{
     width:auto;
     height:100vh;
-    background-image: URL(imgs/sample.png);   
-    background-size: cover;
-    background-position: center;
+    --hero-image: url(imgs/sample.png);
+    position: sticky;
+    top:0;
+    z-index: 1;
+    isolation: isolate;
+    --hero-progress: 0;
+    --hero-shift: 0px;
+    --hero-opacity: 1;
+    --hero-scale: 1;
+    --bg-shift: 0px;
+    --bg-scale: 1.08;
 }
 .container{
     padding:10px 10px;
@@ -58,6 +73,55 @@ nav ul li a:hover::after{
     margin-top:10%;
     font-size:30px;
     margin-left: 15px;
+     position: relative;
+    transform: translate3d(0, var(--hero-shift), 0)
+               scale(var(--hero-scale));
+    opacity: var(--hero-opacity);
+    transform-origin: center center;
+    will-change: transform, opacity;
+}
+#header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: var(--hero-image);
+    background-size: cover;
+    background-position: center;
+    transform:
+        translate3d(0, var(--bg-shift), 0)
+        scale(var(--bg-scale));
+    will-change: transform;
+}
+#header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            ellipse at 75% 30%,
+            rgba(72, 52, 212, 0.30),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 15% 75%,
+            rgba(56, 189, 248, 0.20),
+            transparent 45%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(11, 17, 32, 0.75) 100%
+        );
+    opacity: calc(1 - var(--hero-progress) * 0.5);
+    
+}
+#header .container {
+    position: relative;
+    z-index: 1;
 }
 .header-text h1{
     font-size:60px;
@@ -99,23 +163,20 @@ nav ul li a:hover::after{
 #about{
     padding:50px 0;
     color:#94A3B8;
+    position: relative;
+    z-index:2;
+    min-height:100vh;
+    background-image: url("imgs/sample2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .row{
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.abt-col-1{
-    flex-basis:35%;
-}
-.abt-col-1 img{
-    width:100%;
-    border-radius: 10px;
-}
-.abt-col-2{
-    flex-basis:60%;
-    
-}
+
 .sub-title{
     font-size:60px;
     font-weight:600;
@@ -128,10 +189,7 @@ nav ul li a:hover::after{
     color:#38BDF8;
 
 }
-.qwe{
-    margin:10px;
-    font-size:25px;
-}
+
 .tab-titles{
     display:flex;
     margin:20px 10px 40px;
@@ -186,9 +244,132 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display:block;
 }
+.about-heading {
+    margin-bottom: 35px;
+}
+.about-label {
+    display: block;
+    color: #38BDF8;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+.about-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+    align-items: stretch;
+}
+.about-intro {
+    padding: 20px 0;
+}
+.about-intro h2 {
+    font-size: 35px;
+    color: #E6EDF7;
+    margin-bottom: 20px;
+}
+.about-intro h2 span {
+    color: #38BDF8;
+}
+.about-intro p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #B6C4D8;
+    margin-bottom: 15px;
+    max-width: 750px;
+}
+.education-card,
+.about-info-card {
+    background: rgba(22, 31, 51, 0.75);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    border-radius: 14px;
+    padding: 28px;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+.education-card:hover,
+.about-info-card:hover {
+    transform: translateY(-5px);
+    border-color: #38BDF8;
+}
+.education-icon {
+    font-size: 35px;
+    color: #38BDF8;
+    margin: 15px 0;
+}
+.education-card h3 {
+    font-size: 22px;
+    color: #E6EDF7;
+    margin-bottom: 10px;
+}
+.education-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #A7B8CE;
+}
+.education-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    margin-top: 22px;
+    padding-top: 15px;
+    color: #38BDF8;
+    font-size: 14px;
+}
+
+.about-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+.about-info-card {
+    padding: 25px;
+}
+.about-icon {
+    font-size: 28px;
+    color: #38BDF8;
+    margin-bottom: 15px;
+}
+.about-info-card h3 {
+    font-size: 24px;
+    color: #E6EDF7;
+    margin-bottom: 12px;
+}
+.about-info-card p {
+    color: #B6C4D8;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+.about-tags span {
+    color: #38BDF8;
+    background: rgba(56, 189, 248, 0.09);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 20px;
+    padding: 7px 13px;
+    font-size: 13px;
+}
+
+#about .title-sub {
+    margin-top: 55px;
+}
 /*---------------------------Projects--------------------------*/
 #project{
     padding: 50px 0px;
+    position: relative;
+    z-index: 2;
+    background-image: url("imgs/sample2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .project-list{
     display: grid;
@@ -291,6 +472,12 @@ nav ul li a:hover::after{
     color:#E6EDF7
 }
 /*-------------------------contact-------------------------*/
+#contact{
+    background-image: url("imgs/sample2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .col-left{
     flex-basis:35%;
 }
@@ -378,9 +565,7 @@ form .btn2{
     #cl{
         display:none;
     }
-    html, body{
-        overflow-x:hidden;
-    }
+   
     img{
         max-width:100%;
     }
@@ -390,7 +575,7 @@ form .btn2{
             padding:10px 20px;
         }
         #header{
-            background-image:url(imgs/sample_1.png);
+            --hero-image: url(imgs/sample_1.png);
         }
         .header-text{
             font-size:16px;
@@ -448,28 +633,12 @@ form .btn2{
         #about{
             padding:30px 0;
         }
-        .abt-col-1,
-        .abt-col-2{
-            flex-basis:100%;
-        }
-        .abt-col-1{
-            margin-bottom:30px;
-        }
-        .abt-col-1 img{
-            max-width:350px;
-            display:block;
-            margin:0 auto;
-        }
         .sub-title{
             font-size:42px;
         }
         .title-sub{
             font-size:32px;
             margin-top:30px;
-        }
-        .qwe{
-            font-size:17px;
-            margin:10px 0;
         }
         .tab-titles{
             flex-wrap:wrap;
@@ -486,6 +655,24 @@ form .btn2{
         .tab-contents ul li img{
             height:55px;
             width:55px;
+        }
+        .about-top {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .about-bottom {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .about-intro h2 {
+            font-size: 28px;
+        }
+        .about-intro p {
+            font-size: 16px;
+        }
+        .education-card,
+        .about-info-card {
+            padding: 22px;
         }
         #project{
             padding:30px 0;
@@ -570,8 +757,28 @@ form .btn2{
         .title-sub{
             font-size:26px;
         }
-        .qwe{
-            font-size:15px;
+        .about-intro h2 {
+            font-size: 24px;
+        }
+
+        .about-intro p {
+            font-size: 15px;
+        }
+
+        .education-card h3 {
+            font-size: 19px;
+        }
+
+        .about-info-card h3 {
+            font-size: 21px;
+        }
+
+        .about-info-card p {
+            font-size: 14px;
+        }
+
+        .about-tags span {
+            font-size: 12px;
         }
         .tab-links{
             font-size:16px;

@@ -8,73 +8,154 @@
         <script src="https://kit.fontawesome.com/888fe3bd41.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id = "header">
-            <div class="container">
-                <nav>
+        <div class="intro-wrapper">
+            <div id = "header">
+                <div class="container">
+                    <nav>
+                        
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#title-sub">Skills</a></li>
+                            <li><a href="#project">Projects</a></li>
+                            <li><a href="#contact">contact</a></li>
+                            <li> </li>
+                            <i class="fas fa-xmark" id="cl" onclick="closemenu()"></i>
+                        </ul>
+                        <i class="fas fa-bars" id="mn" onclick="openmenu()"></i>
+                    </nav>
+                <div class="header-text">
                     
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#title-sub">Skills</a></li>
-                        <li><a href="#project">Projects</a></li>
-                        <li><a href="#contact">contact</a></li>
-                        <li> </li>
-                        <i class="fas fa-xmark" id="cl" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fas fa-bars" id="mn" onclick="openmenu()"></i>
-                </nav>
-            <div class="header-text">
-                
-                <h1>Hi,I'M <span>Harish Kumar</span></h1>
-                <p>B.TECH <span>CSE</span></p>
-                <p class="hp1">Amrita Vishwa Vidyapeetham,Coimbatore.</p>
-                <p class="tagline">Exploring. Building. Evolving.</p>
-            </div>
-            </div>
-        </div>
-        <!------------------------abt----------------->
-        <div id="about">
-            <div class="row">
-                <div class="abt-col-1">
-                     <img src="imgs/logo.png">
+                    <h1>Hi,I'M <span>Harish Kumar</span></h1>
+                    <p>B.TECH <span>CSE</span></p>
+                    <p class="hp1">Amrita Vishwa Vidyapeetham,Coimbatore.</p>
+                    <p class="tagline">Exploring. Building. Evolving.</p>
                 </div>
-                <div class="abt-col-2">
-                    <h1 class="sub-title">About me</h1>
-                    <p class="qwe"> I'm a Computer Science student interested in web development and<br>
-                                    software development. I enjoy exploring new technologies, building<br>
-                                    projects, and turning ideas into something useful.<br><br>
-                                    I believe in learning by doing — experimenting with code, solving<br>
-                                    problems, and understanding how things work behind the scenes.<br>
-                                    I'm always exploring different areas of computer science, improving <br>
-                                    my skills, and challenging myself to build better things.
-                    </p>
+                </div>
+            </div>
+         <!------------------------abt----------------->
+            <div id="about">
+                <div class="container">
+                    <div class="about-heading">
+                        <span class="about-label">GET TO KNOW ME</span>
+                        <h1 class="sub-title">A little about me.</h1>
+                    </div>
+                    <div class="about-top">
+                        <div class="about-intro">
+                            <h2>Hey, I'm <span>Harish Kumar.</span></h2>
+                            <p>
+                                I'm a second-year Computer Science student interested
+                                in full-stack development and software engineering.
+                                I enjoy exploring how applications work, experimenting
+                                with new technologies, and turning ideas into
+                                functional projects.
+                            </p>
+                            <p>
+                                For me, programming is more than writing code.
+                                It's about understanding problems, finding solutions,
+                                and continuously improving the way I build things.
+                            </p>
+                        </div>
+                        <div class="education-card">
+                            <span class="about-label">MY EDUCATION</span>
+                            <i class="fa-solid fa-graduation-cap education-icon"></i>
+                            <h3>Amrita Vishwa Vidyapeetham</h3>
+                            <p>B.Tech - Computer Science and Engineering</p>
+                            <div class="education-footer">
+                                <span>2025 - 2029</span>
+                                <span>Coimbatore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-bottom">
+                        <div class="about-info-card">
+                            <i class="fa-solid fa-code about-icon"></i>
+                            <h3>How I learn</h3>
+                            <p>
+                                I believe in learning by building. Instead of just
+                                memorising concepts, I prefer understanding the logic
+                                behind them and applying that knowledge through
+                                practical projects.
+                            </p>
+                            <div class="about-tags">
+                                <span>Learn by building</span>
+                                <span>Understand the logic</span>
+                                <span>Keep experimenting</span>
+                            </div>
+                        </div>
+                        <div class="about-info-card">
+                            <i class="fa-solid fa-gamepad about-icon"></i>
+                            <h3>Beyond the screen</h3>
+                            <p>
+                                Outside academics and programming, I enjoy fitness
+                                and gaming. Whether it's spending time training or
+                                getting immersed in a game, these are some of the
+                                things that keep me engaged beyond coding.
+                            </p>
+                            <div class="about-tags">
+                                <span>Fitness</span>
+                                <span>Gaming</span>
+                            </div>
+                        </div>
+                    </div>
                     <h1 class="title-sub" id="title-sub">Skills</h1>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Programming')">Programming languages</p>
-                        <p class="tab-links" onclick="opentab('Web')">Web Development</p>
-                        <p class="tab-links" onclick="opentab('Tools')">Tools</p>
-
+                        <p class="tab-links active-link"
+                        onclick="opentab('Programming')">
+                            Programming languages
+                        </p>
+                        <p class="tab-links"
+                        onclick="opentab('Web')">
+                            Web Development
+                        </p>
+                        <p class="tab-links"
+                        onclick="opentab('Tools')">
+                            Tools
+                        </p>
                     </div>
                     <div class="tab-contents active-tab" id="Programming">
-                        <ul><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/haskell/haskell-original.svg" /></li>
-                            <li><img src="https://cdn.simpleicons.org/c/00599C" width="50"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /></li>
+                        <ul>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/haskell/haskell-original.svg">
+                            </li>
+                            <li>
+                                <img src="https://cdn.simpleicons.org/c/00599C" width="50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg">
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Web">
                         <ul>
-                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /></li>
-                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /></li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
+                            </li>
+
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg">
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Tools">
                         <ul>
-                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class="github-icon"></li>
-                            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg" /></li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class="github-icon">
+                            </li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg">
+                            </li>
                         </ul>
                     </div>
                 </div>
-            </div>
-
+            </div>   
         </div>
         <!--------------------------Projects----------------------------->
         <div id="project">
